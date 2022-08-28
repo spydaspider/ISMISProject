@@ -28,15 +28,14 @@ export default class AlertHandler {
           domClass.textContent = message;
           if (status === 'success') {
             domClass.style.backgroundColor = '#03aa46';
+            domClass.classList.add('active');
+            setTimeout(()=>domClass.classList.remove('active'),3000);
           } else {
             domClass.style.backgroundColor = '#dd0202';
+            domClass.classList.add('active');
           }
         }
       }
 
-  /*  static removeAlerts = (domClass) =>{
-
-                  document.querySelector('.add-item-message').style.display = 'none';
-
-          }  */
+  
 }

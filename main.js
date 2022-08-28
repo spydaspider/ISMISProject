@@ -1,6 +1,7 @@
 import AlertHandler from './modules/alertHandler.js';
 import UsersStore from './modules/usersStore.js';
 import Users from './modules/users.js';
+import SmallEngines from './modules/smallEngines.js';
 
 const loginButton = document.querySelector('.login');
 const createAccount = document.querySelector('.create-account');
@@ -80,5 +81,39 @@ addForm.addEventListener('click', (e) => {
     AlertHandler.generalAlerts('Detected Costprice greater the selling price', 'error', msgClass);
   } else {
     AlertHandler.generalAlerts('Item added successfully.', 'success', msgClass);
+    SmallEngines.clearField(itemName);
+    SmallEngines.clearField(itemNum);
+
+    SmallEngines.clearField(costPrice);
+
+    SmallEngines.clearField(sellingPrice);
+
+
   }
 });
+//Use jquery to animate the menu.
+const menuContent = $('.menu-content');
+$('.mobile-menu').on('click', function(){
+    $(menuContent).toggle(500);
+
+})
+/* $('.item-add').on('click', function(){
+  $('.add-items').css({"display": "block"});
+  $('.home-content').css({"display": "none"});
+  $(menuContent).toggle(500);
+}) */
+
+//if the user clicks on a menu item
+var x = window.matchMedia("(width: 768px)");
+if(x.matches)
+{
+   mc.style.display = 'none';
+}
+ document.querySelector('.item-add').addEventListener('click', () => {
+  addItems.classList.add('active');
+  homeContent.classList.add('active');
+  const mc = document.querySelector('.menu-content');
+  mc.style.display = 'none';
+ 
+}) 
+

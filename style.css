@@ -13,6 +13,7 @@ li {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .main-container {
@@ -127,6 +128,7 @@ main {
   grid-column: 1/13;
   margin-top: 1.4em;
   height: 500px;
+  overflow: auto;
 }
 
 .add-title {
@@ -138,6 +140,8 @@ main {
 .add-items {
   max-width: 500px;
   margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 3em;
   display: none;
 }
 
@@ -189,6 +193,10 @@ main {
   font-size: 19px;
   padding: 0.5em;
   text-align: center;
+  display: none;
+}
+.add-item-message.active{
+  display: block;
 }
 
 .e {
@@ -217,7 +225,33 @@ main {
 .home-content.active {
   display: none;
 }
+ .menu-content{
+  display: grid;
+  top:0;
+  grid-template-columns: repeat(12,1fr);
+  display:none;
 
+ 
+ }
+ .menu-items{
+  background:#03aa46;
+  grid-column: 1/13;
+  padding: 2em 0;
+  display: grid;
+
+ }
+ .menu-items li{
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.8em 0;
+ }
+ .menu-items li:hover{
+  background: #0c8f41;
+
+ }
+ 
 .side-navigation {
   background: #007e33;
   grid-column: 1/3;
@@ -316,6 +350,7 @@ input:focus {
   font-size: 18px;
   border-radius: 6px;
   border: 2px solid rgb(185 181 181);
+  
 }
 
 .login {
@@ -327,6 +362,19 @@ input:focus {
   cursor: pointer;
   background: #03aa46;
   color: white;
+ 
+}
+.mobile-menu{
+  cursor: pointer;
+  display: none;
+}
+.bar{
+display: block;
+width: 30px;
+height: 4px;
+margin: 6px 15px;
+background: #03aa46;
+
 }
 
 .login:hover {
@@ -342,6 +390,7 @@ input:focus {
   cursor: pointer;
   background: #03aa46;
   color: #fff;
+  
 }
 
 .create-account:hover {
@@ -370,11 +419,43 @@ input:focus {
   main {
     grid-column: 1/13;
   }
+  .logo{
+    display: none;
+  }
+  header{
+    padding-bottom: 0.5em;
+  }
 
+  .mobile-menu{
+    display: block;
+  }
+  .second-bar{
+    justify-content: space-between;
+  }
+  .work-space{
+    margin-top: -1.5em;
+  }
+.right-links{
+  width: 60%;
+  justify-content: space-between;
+  margin-left: 1em;
+}
+.right-links li{
+  margin-top: 0.6em;
+}
+.home{
+  width: 30px;
+}
+.about{
+  width: 37px;
+}
+.contact{
+  width: 38px;
+}
   .get-in-forms {
     grid-column: 2/12;
   }
-
+ 
   #login input {
     grid-column: 3/11;
   }
@@ -404,40 +485,9 @@ input:focus {
   .side-navigation {
     display: none;
   }
-}
-
-@media screen and (max-width: 1000px) {
-  .login-msg {
-    grid-column: 2/12;
-  }
-
-  .create-msg {
-    grid-column: 2/12;
-  }
-
-  #login input {
-    grid-column: 2/12;
-  }
-
-  #create-account input {
-    grid-column: 2/12;
+  .add-items{
+    margin-top: 2em;
+    padding: 0 0.5em;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .login-msg {
-    grid-column: 2/12;
-  }
-
-  .create-msg {
-    grid-column: 2/12;
-  }
-
-  #login input {
-    grid-column: 2/12;
-  }
-
-  #create-account input {
-    grid-column: 2/12;
-  }
-}
