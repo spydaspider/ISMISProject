@@ -13,7 +13,6 @@ li {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .main-container {
@@ -58,6 +57,13 @@ header {
 
 .right-links li {
   cursor: pointer;
+  font-size:20px;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0.5em;
+  color:#007e33;
+  transition: background-color 0.5s ease-out;
+  
 }
 
 .logo {
@@ -93,23 +99,17 @@ header {
   transition: 0.1s;
   transition: 0.1s;
 }
-
-.right-links li:hover {
-  transform: rotate(360deg);
-  transition: 0.4s;
-  transform: rotate(360deg);
-  transform: rotate(360deg);
-  transform: rotate(360deg);
-  transform: rotate(360deg);
-  transition: 0.4s;
-  transition: 0.4s;
-  transition: 0.4s;
-  transition: 0.4s;
+.right-links li:hover{
+ /*background: rgb(211, 207, 207);
+ */background:#007e33;
+ color: #fff;
+ 
+}
+.right-links i{
+  display: none;
 }
 
-.home {
-  width: 40px;
-}
+
 
 .top-bar-right {
   color: #fff;
@@ -122,13 +122,12 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-row-gap: 2em;
+  overflow:visible;
 }
 
 .work-space {
   grid-column: 1/13;
   margin-top: 1.4em;
-  height: 500px;
-  overflow: auto;
 }
 
 .add-title {
@@ -141,8 +140,8 @@ main {
   max-width: 500px;
   margin: 0 auto;
   padding-top: 1em;
-  padding-bottom: 3em;
   display: none;
+  padding-bottom: 15%;
 }
 
 .add-items.active {
@@ -181,10 +180,6 @@ main {
 .add-button:hover {
   background: #6070ff;
   color: #fff;
-  transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
   transition: background-color 1s ease-out;
 }
 
@@ -434,6 +429,7 @@ background: #03aa46;
   }
   .work-space{
     margin-top: -1.5em;
+    padding-bottom: 15%;
   }
 .right-links{
   width: 60%;
@@ -441,7 +437,38 @@ background: #03aa46;
   margin-left: 1em;
 }
 .right-links li{
-  margin-top: 0.6em;
+  font-size: 30px;
+  padding:0;
+  margin-top: 0.2em;
+}
+.right-links li:hover{
+  transform: rotate(360deg);
+  transition: 0.4s;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  background:rgb(242 240 240);
+  color:#007e33;
+}
+ .right-links li:active {
+  transform: rotate(760deg);
+  transition: 0.2s;
+  -webkit-transform: rotate(760deg);
+  -moz-transform: rotate(760deg);
+  -ms-transform: rotate(760deg);
+  -o-transform: rotate(760deg);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+} 
+.right-links i{
+  display: block;
 }
 .home{
   width: 30px;
@@ -455,7 +482,9 @@ background: #03aa46;
   .get-in-forms {
     grid-column: 2/12;
   }
- 
+  .hm,.ab,.ct{
+    display:none;
+  }
   #login input {
     grid-column: 3/11;
   }
@@ -487,7 +516,7 @@ background: #03aa46;
   }
   .add-items{
     margin-top: 2em;
-    padding: 0 0.5em;
+    padding: 5em 0.5em;
   }
 }
 

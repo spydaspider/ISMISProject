@@ -38,32 +38,32 @@ createAccount.addEventListener('click', (e) => {
 });
 
 // handle invents for the work space.
-const logo = document.querySelector('.logo');
-const home = document.querySelector('.home');
+const logo = $('.logo');
+const home = $('.home');
 /* const about = document.querySelector('.contact');
  */// side nav classes
-const addNew = document.querySelector('.add-new');
+const addNew = $('.add-new');
 /* const storeRoom = document.querySelector('.store-room');
  */
 /* const sell = document.querySelector('.sell');
  *//* const queryRecords = document.querySelector('.query-records');
 const dataTransfer = document.querySelector('.data-transfer'); */
 // works space classes
-const addItems = document.querySelector('.add-items');
-const homeContent = document.querySelector('.home-content');
-addNew.addEventListener('click', () => {
-  addItems.classList.add('active');
-  homeContent.classList.add('active');
+const addItems = $('.add-items');
+const homeContent = $('.home-content');
+addNew.on('click', function(){
+  $(addItems).show();
+  $(homeContent).hide();
 });
 // If user clicks the logo
-logo.addEventListener('click', () => {
-  addItems.classList.remove('active');
-  homeContent.classList.remove('active');
+logo.on('click', () => {
+  $(addItems).hide();
+  $(homeContent).show();
 });
 // If user clicks home button
-home.addEventListener('click', () => {
-  addItems.classList.remove('active');
-  homeContent.classList.remove('active');
+home.on('click', () => {
+  $(addItems).hide();
+  $(homeContent).show();
 });
 // If user clicks the add form button.
 const addForm = document.querySelector('.add-button');
@@ -97,23 +97,9 @@ $('.mobile-menu').on('click', function(){
     $(menuContent).toggle(500);
 
 })
-/* $('.item-add').on('click', function(){
+ $('.item-add').on('click', function(){
   $('.add-items').css({"display": "block"});
   $('.home-content').css({"display": "none"});
   $(menuContent).toggle(500);
-}) */
-
-//if the user clicks on a menu item
-var x = window.matchMedia("(width: 768px)");
-if(x.matches)
-{
-   mc.style.display = 'none';
-}
- document.querySelector('.item-add').addEventListener('click', () => {
-  addItems.classList.add('active');
-  homeContent.classList.add('active');
-  const mc = document.querySelector('.menu-content');
-  mc.style.display = 'none';
- 
-}) 
+})
 
