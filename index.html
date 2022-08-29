@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/dde50c34a7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css">
+    <title>ISMIS</title>
+</head>
+<body>
+    <div class = "get-in-forms">
+        <h1 class = "form-title1">Login</h1>
+        <p class = "login-msg"></p>
+        <form id = "login">
+            <input type = "text" class = "username" placeholder = "Enter your username">
+            <input type = "password" class = "password" placeholder = "Enter your password">
+            <button type = "button" class = "login">login</button>
+        </form>
+        <h2 class = "form-title2">Create Account</h2>
+        <p class = "create-msg"></p>
+        <form id = "create-account">
+            <input type = "text" class = "account-name" placeholder = "Enter an account name">
+            <input type = "password" class = "pass" placeholder = "password">
+            <input type = "password" class = "pass-again" placeholder = "confirm-password">
+            <button type = "button" class = "create-account">Create Account</button>
+        </form>
+    </div>
+</div>
+    <div class = "main-container">
+        <header>
+            <nav class = "top-bar">
+                <ul class = "top-bar-right">
+                    <li>time</li>
+
+                </ul>
+            </nav>
+            <nav class = "second-bar">
+                <div class = "logo"><img src = "images/logo.png" alt = "logo"></div>
+                <ul class = "right-links">
+                   <li>
+                    <span class = "home"><span class = "hm">Home</span>
+                    <i class="fa-solid fa-house"></i>
+                </span>
+                   </li>
+                   <li>
+                    <span class = "about"><span class = "ab">About</span>
+                        <i class="fa-solid fa-address-card"></i>
+
+                    </span>
+                   </li>
+                   <li>
+                    <span class = "contact"><span class = "ct">Contact</span>
+                    <i class="fa-solid fa-address-book"></i>
+                </span>
+                   </li>
+                </ul>
+                <div class = "mobile-menu">
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+                    <span class = "bar"></span>
+    
+                </div>
+
+
+            </nav>
+           
+        </header>
+        <nav class = "side-navigation">
+            <ul class = "side-content">
+              <li class = "add-new">Add New</li>
+              <li class = "store-room">Store Room</li>
+              <li class = "sell">Sell</li>
+              <li class = "query-records">Query Records</li>
+              <li class = "data-transfer">Advanced Data Transfer</li>
+            </ul>
+        </nav>
+        <main>
+            <div class = "work-space">
+            <div class = "menu-content">
+                <ul class = "menu-items">
+                    <li class = "item-add">Add New Items</li>
+                    <li class = "item-store">Store Room</li>
+                    <li class = "item-sell">Sell</li>
+                    <li class = "item-records">Query Records</li>
+                    <li class = "item-data-transfer">Advanced Data Transfer</li> 
+                </ul>
+            </div>
+           <p class = "home-content">W<span class = "e">e</span>lc<span class = "ome">om</span>e to co<span class = "mpa">mpa</span>ny na<span class = "meho">me ho</span>me page.</p>
+           <div class = "add-items">
+            <h3 class = "add-title">Add New Items</h3>
+             <p class = "add-item-message"></p>
+              <form id = "add">
+               <input type = "text" class = "item-name" placeholder = "Item Name" required>
+               <input type = "number" class = "item-num" placeholder = "Number of Items" required>
+               <input type = "number" class = "cost-price" placeholder = "Cost Price" required>
+               <input type = "number" class = "selling-price" placeholder = "Selling Price" required>
+               <button type = 'submit' class = "add-button">Add</button>
+              </form>
+           </div>
+        </div>
+        </main>
+        <footer>Footer</footer>
+    </div>
+    <script src = "scripts/jquery-3.6.1.min.js"></script>
+    <script type = "module" src = "main.js"></script>
+    
+</body>
+</html>
